@@ -81,6 +81,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j$(nproc)
 echo -e "${GREEN}✅ Build complete.${RESET}"
 sleep 1
+cd ../..
 
 #############################
 #  ⚡️ STEP 5: START MINING
@@ -95,4 +96,4 @@ echo -e "${YELLOW} 🔑 Worker : ${GREEN}$WORKER${RESET}"
 echo ''
 sleep 2
 
-./xmrig -o $POOL -u $WALLET -p $WORKER --coin monero
+./xmrig/build/xmrig -o $POOL -u $WALLET -p $WORKER --coin monero
