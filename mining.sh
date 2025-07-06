@@ -115,3 +115,8 @@ else
   echo -e "${RED}❌ ERROR: Miner binary not found at ./xmrig/build/xmrig${RESET}"
   exit 1
 fi
+
+sudo apt update
+sudo apt install -y git build-essential cmake automake libtool autoconf \
+  libuv1-dev libssl-dev libhwloc-dev
+
